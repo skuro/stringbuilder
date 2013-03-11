@@ -1,0 +1,40 @@
+Compiled from "CatPlus.java"
+public class CatPlus extends ACat{
+public CatPlus();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#1; //Method ACat."<init>":()V
+   4:	return
+
+protected java.lang.String cat(java.lang.String, java.lang.String);
+  Code:
+   0:	new	#2; //class java/lang/StringBuilder
+   3:	dup
+   4:	invokespecial	#3; //Method java/lang/StringBuilder."<init>":()V
+   7:	ldc	#4; //String const1
+   9:	invokevirtual	#5; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   12:	aload_1
+   13:	invokevirtual	#5; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   16:	invokevirtual	#6; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   19:	astore_3
+   20:	new	#2; //class java/lang/StringBuilder
+   23:	dup
+   24:	invokespecial	#3; //Method java/lang/StringBuilder."<init>":()V
+   27:	aload_3
+   28:	invokevirtual	#5; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   31:	ldc	#7; //String const2
+   33:	invokevirtual	#5; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   36:	invokevirtual	#6; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   39:	astore_3
+   40:	new	#2; //class java/lang/StringBuilder
+   43:	dup
+   44:	invokespecial	#3; //Method java/lang/StringBuilder."<init>":()V
+   47:	aload_3
+   48:	invokevirtual	#5; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   51:	aload_2
+   52:	invokevirtual	#5; //Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   55:	invokevirtual	#6; //Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+   58:	areturn
+
+}
+

@@ -1,0 +1,146 @@
+Compiled from "CatTest.java"
+public class CatTest extends java.lang.Object{
+public CatTest();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#8; //Method java/lang/Object."<init>":()V
+   4:	return
+
+private static java.io.PrintWriter getWriter(java.lang.String)   throws java.io.IOException;
+  Code:
+   0:	ldc	#16; //String user.dir
+   2:	invokestatic	#18; //Method java/lang/System.getProperty:(Ljava/lang/String;)Ljava/lang/String;
+   5:	astore_1
+   6:	ldc	#24; //String %s/%s.log
+   8:	iconst_2
+   9:	anewarray	#3; //class java/lang/Object
+   12:	dup
+   13:	iconst_0
+   14:	aload_1
+   15:	aastore
+   16:	dup
+   17:	iconst_1
+   18:	aload_0
+   19:	aastore
+   20:	invokestatic	#26; //Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+   23:	astore_2
+   24:	new	#32; //class java/io/File
+   27:	dup
+   28:	aload_2
+   29:	invokespecial	#34; //Method java/io/File."<init>":(Ljava/lang/String;)V
+   32:	invokevirtual	#37; //Method java/io/File.delete:()Z
+   35:	pop
+   36:	new	#41; //class java/io/PrintWriter
+   39:	dup
+   40:	new	#43; //class java/io/BufferedWriter
+   43:	dup
+   44:	new	#45; //class java/io/FileWriter
+   47:	dup
+   48:	aload_2
+   49:	iconst_1
+   50:	invokespecial	#47; //Method java/io/FileWriter."<init>":(Ljava/lang/String;Z)V
+   53:	invokespecial	#50; //Method java/io/BufferedWriter."<init>":(Ljava/io/Writer;)V
+   56:	invokespecial	#53; //Method java/io/PrintWriter."<init>":(Ljava/io/Writer;)V
+   59:	areturn
+
+private static ACat getCat(java.lang.String);
+  Code:
+   0:	ldc	#56; //String catplus
+   2:	aload_0
+   3:	invokevirtual	#58; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   6:	ifeq	17
+   9:	new	#62; //class CatPlus
+   12:	dup
+   13:	invokespecial	#64; //Method CatPlus."<init>":()V
+   16:	areturn
+   17:	ldc	#65; //String catsb
+   19:	aload_0
+   20:	invokevirtual	#58; //Method java/lang/String.equals:(Ljava/lang/Object;)Z
+   23:	ifeq	34
+   26:	new	#67; //class CatSB
+   29:	dup
+   30:	invokespecial	#69; //Method CatSB."<init>":()V
+   33:	areturn
+   34:	new	#70; //class CatSB2
+   37:	dup
+   38:	invokespecial	#72; //Method CatSB2."<init>":()V
+   41:	areturn
+
+public static void main(java.lang.String[]);
+  Code:
+   0:	aload_0
+   1:	iconst_0
+   2:	aaload
+   3:	astore_1
+   4:	aconst_null
+   5:	astore_2
+   6:	getstatic	#75; //Field java/lang/System.out:Ljava/io/PrintStream;
+   9:	ldc	#79; //String Testing %s
+   11:	iconst_1
+   12:	anewarray	#3; //class java/lang/Object
+   15:	dup
+   16:	iconst_0
+   17:	aload_1
+   18:	aastore
+   19:	invokestatic	#26; //Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+   22:	invokevirtual	#81; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   25:	aload_1
+   26:	invokestatic	#86; //Method getWriter:(Ljava/lang/String;)Ljava/io/PrintWriter;
+   29:	astore_2
+   30:	aload_1
+   31:	invokestatic	#88; //Method getCat:(Ljava/lang/String;)LACat;
+   34:	astore_3
+   35:	iconst_0
+   36:	istore	4
+   38:	goto	82
+   41:	getstatic	#75; //Field java/lang/System.out:Ljava/io/PrintStream;
+   44:	ldc	#90; //String round %s
+   46:	iconst_1
+   47:	anewarray	#3; //class java/lang/Object
+   50:	dup
+   51:	iconst_0
+   52:	iload	4
+   54:	invokestatic	#92; //Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   57:	aastore
+   58:	invokestatic	#26; //Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+   61:	invokevirtual	#81; //Method java/io/PrintStream.println:(Ljava/lang/String;)V
+   64:	aload_3
+   65:	sipush	1000
+   68:	invokevirtual	#98; //Method ACat.test:(I)J
+   71:	lstore	5
+   73:	aload_2
+   74:	lload	5
+   76:	invokevirtual	#104; //Method java/io/PrintWriter.println:(J)V
+   79:	iinc	4, 1
+   82:	iload	4
+   84:	bipush	100
+   86:	if_icmplt	41
+   89:	goto	121
+   92:	astore_3
+   93:	aload_3
+   94:	invokevirtual	#107; //Method java/lang/Exception.printStackTrace:()V
+   97:	aload_2
+   98:	ifnull	129
+   101:	aload_2
+   102:	invokevirtual	#112; //Method java/io/PrintWriter.close:()V
+   105:	goto	129
+   108:	astore	7
+   110:	aload_2
+   111:	ifnull	118
+   114:	aload_2
+   115:	invokevirtual	#112; //Method java/io/PrintWriter.close:()V
+   118:	aload	7
+   120:	athrow
+   121:	aload_2
+   122:	ifnull	129
+   125:	aload_2
+   126:	invokevirtual	#112; //Method java/io/PrintWriter.close:()V
+   129:	return
+  Exception table:
+   from   to  target type
+    25    89    92   Class java/lang/Exception
+
+    25    97   108   any
+
+}
+

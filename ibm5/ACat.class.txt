@@ -1,0 +1,48 @@
+Compiled from "ACat.java"
+public abstract class ACat extends java.lang.Object{
+public ACat();
+  Code:
+   0:	aload_0
+   1:	invokespecial	#1; //Method java/lang/Object."<init>":()V
+   4:	return
+
+protected abstract java.lang.String cat(java.lang.String, java.lang.String);
+
+public long test(int);
+  Code:
+   0:	ldc	#2; //String start
+   2:	astore_2
+   3:	invokestatic	#3; //Method java/lang/System.currentTimeMillis:()J
+   6:	lstore_3
+   7:	iconst_0
+   8:	istore	5
+   10:	iload	5
+   12:	iload_1
+   13:	if_icmpge	55
+   16:	bipush	10
+   18:	newarray byte
+   20:	astore	6
+   22:	new	#4; //class java/util/Random
+   25:	dup
+   26:	invokespecial	#5; //Method java/util/Random."<init>":()V
+   29:	aload	6
+   31:	invokevirtual	#6; //Method java/util/Random.nextBytes:([B)V
+   34:	aload_0
+   35:	aload_2
+   36:	new	#7; //class java/lang/String
+   39:	dup
+   40:	aload	6
+   42:	invokespecial	#8; //Method java/lang/String."<init>":([B)V
+   45:	invokevirtual	#9; //Method cat:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+   48:	astore_2
+   49:	iinc	5, 1
+   52:	goto	10
+   55:	invokestatic	#3; //Method java/lang/System.currentTimeMillis:()J
+   58:	lstore	5
+   60:	lload	5
+   62:	lload_3
+   63:	lsub
+   64:	lreturn
+
+}
+
