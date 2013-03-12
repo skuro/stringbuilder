@@ -24,7 +24,7 @@ plot "ibm5/catplus.log" title titles("ibm5") with lines, \
      "java7/catplus.log" title titles("java7") with lines
 
 # CatSB
-set title "Concatenation with new StringBuffer()"
+set title "Concatenation with new StringBuilder()"
 set yrange [0:100]
 set ylabel "ms (less is better)"
 set output "catsb.png"
@@ -37,7 +37,7 @@ plot "ibm5/catsb.log" title titles("ibm5") with lines, \
      "java7/catsb.log" title titles("java7") with lines
 
 # CatSB2
-set title "Concatenation with new StringBuffer(base)"
+set title "Concatenation with new StringBuilder(base)"
 set yrange [0:100]
 set ylabel "ms (less is better)"
 set output "catsb2.png"
